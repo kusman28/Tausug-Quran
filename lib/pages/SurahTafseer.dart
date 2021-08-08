@@ -303,20 +303,20 @@ class _SurahTafseerState extends State<SurahTafseer> {
                                                     mainAxisAlignment:
                                                         MainAxisAlignment.end,
                                                     children: <Widget>[
-                                                      // IconButton(
-                                                      //   icon: new Icon(
-                                                      //       Icons.info_outline),
-                                                      //   color: Colors.grey,
-                                                      //   onPressed: () =>
-                                                      //       _onButtonPressed(
-                                                      //           snapshot, key),
-                                                      // ),
-                                                      // Text(
-                                                      //   '|',
-                                                      //   style: TextStyle(
-                                                      //       color: Colors
-                                                      //           .grey[300]),
-                                                      // ),
+                                                      IconButton(
+                                                        icon: new Icon(
+                                                            Icons.info_outline),
+                                                        color: Colors.grey,
+                                                        onPressed: () =>
+                                                            _onButtonPressed(
+                                                                snapshot, key),
+                                                      ),
+                                                      Text(
+                                                        '|',
+                                                        style: TextStyle(
+                                                            color: Colors
+                                                                .grey[300]),
+                                                      ),
 
                                                       IconButton(
                                                           icon: new Icon(Icons
@@ -410,11 +410,17 @@ class _SurahTafseerState extends State<SurahTafseer> {
                                               ),
                                             );
                                           })
-                                      : Padding(
-                                          padding: const EdgeInsets.all(20.0),
-                                          child: Center(
-                                              child:
-                                                  CircularProgressIndicator()),
+                                      : Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(20.0),
+                                              child: Center(
+                                                  child:
+                                                      CircularProgressIndicator()),
+                                            ),
+                                            Text('Loading...')
+                                          ],
                                         )
                                 ]);
                               },
@@ -460,8 +466,9 @@ class _SurahTafseerState extends State<SurahTafseer> {
         ListTile(
           contentPadding: EdgeInsets.all(18),
           // leading: Icon(Icons.info),
-          title: Text(
-              'Parsawahan:\n' + snapshot.data.tafsir.id.parsawahan.text[key]),
+          title:
+              // Text('Tafsir:\n' + snapshot.data.tafsir.id.parsawahan.text[key]),
+              Text('Tafsir:\n\n' + 'Ha susungun pa. In shaa Allah'),
           // onTap: () => _selectItem('In shaa Allah'),
         )
       ],

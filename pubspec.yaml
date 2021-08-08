@@ -1,5 +1,5 @@
 name: tausug_tafseer
-description: A new Flutter project.
+description: Ma'na sin Quran ha Bahasa Sug.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -24,6 +24,7 @@ dependencies:
   provider: ^4.0.5
   pk_skeleton: ^0.0.2
   package_info: ^0.4.0+17
+  font_awesome_flutter: ^8.0.0
   permission_handler: ^5.0.0+hotfix.4
   http: ^0.12.0+4
   shared_preferences: ^0.5.8
